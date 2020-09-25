@@ -1,0 +1,83 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100vh;
+  background: #666666;
+  font-family: 'Open Sans', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  position: absolute;
+  height: 400px;
+  width: 400px;
+  top: 50%;
+  left: 50%;
+  border-radius: 25px;
+  transform: translate(-50%, -50%);
+  background-color: #ffffff;
+  box-shadow: 10px 0 50px rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card .triangle {
+  height: 0;
+  width: 0;
+  border-style: solid;
+  border-width: 0 75px 150px 75px;
+  border-color: transparent transparent #000000 transparent;
+}
+
+.content {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  background-color: #000000;
+  clip-path: circle(50px at 0 0);
+  transition: all 0.5s;
+  cursor: pointer;
+}
+
+h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  text-align: center;
+  font-size: 48px;
+  white-space: nowrap;
+  color: #ffffff;
+  transform: translate(-50%, -50%);
+}
+
+i {
+  position: absolute;
+  top: 11px;
+  left: 15px;
+  color: #ffffff;
+  opacity: 1;
+  transition: all 0.5s;
+}
+
+.content:hover {
+  border-radius: 25px;
+  clip-path: circle(600px at 0 0);
+}
+
+.content:hover i {
+  opacity: 0;
+  transform: translateXY(100px);
+}
